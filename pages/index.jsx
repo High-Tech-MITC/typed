@@ -25,7 +25,13 @@ export default function Home() {
 
   // <timing>
 
+  // time starts when we start to type
+  //  and ends when we finish it successfull
+
   // </timing>
+
+  // error limit
+  // if the error is more than 5 then the game will restart
 
   const handleTyping = (e) => {
     let len = newWord.length;
@@ -47,6 +53,9 @@ export default function Home() {
   };
   return (
     <main>
+      <Head>
+        <title>TYPED | Increase Your Typing Speed</title>
+      </Head>
       <Header />
       <div className="container">
         <p
