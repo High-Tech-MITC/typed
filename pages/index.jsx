@@ -19,12 +19,15 @@ export default function Home() {
   const [nope, setNope] = useState(false);
 
   const shuffleWord = () => {
+    setNewWord("");
     setWord(words[Math.floor(Math.random() * words.length)]);
   };
 
-  const handleTyping = (e) => {
-    // console.log(, newWord);
+  // <timing>
 
+  // </timing>
+
+  const handleTyping = (e) => {
     let len = newWord.length;
     if (word == e.target.value) {
       setNope(false);
@@ -111,9 +114,13 @@ export default function Home() {
         .word {
           font-size: 18px;
           text-align: center;
-          border: 2px dotted white;
+          border: 2px dotlted wdhite;
+          box-shadow: 0.1rem 0.001rem 1rem black;
           width: 75%;
-          padding: 10px;
+          padding: 1vh;
+          height: 10vh;
+          display: flex;
+          align-items: center;
           color: white;
         }
 
